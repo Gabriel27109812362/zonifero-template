@@ -1,5 +1,134 @@
-$body-color: blue;
+$product-color: #3146FF;
+$text-color: #000;
+$background-color: #F7F7F7;
+$secondary-color: #01FFCB;
 
-body {
-  color: $body-color;
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap');
+
+.menu {
+  width: 100vw;
+  height: 201px;
 }
+
+.logo {
+  margin: 50px auto 68px 88px;
+  display: inline-block;
+}
+
+
+.tab-first-item {
+  color: $text-color;
+  font-family: 'Roboto', serif, "Roboto Regular";
+  font-size: 12px;
+  margin-left: 5px;
+  margin-right: 5px;
+  display: inline-block;
+}
+
+.top-nav {
+  display: inline-block;
+  float: right;
+  margin-top: 50px;
+}
+
+.signIn {
+  height: 17px;
+  width: 50px;
+  color: $text-color;
+  font-family: "Roboto", serif, "Roboto Regular";
+  font-size: 17px;
+  line-height: 0;
+  text-align: center;
+}
+
+.get-btn {
+  height: 80px;
+  width: 280px;
+  background-color: $product-color;
+  border: 0;
+  text-align: center;
+  float: right;
+}
+
+.get-txt {
+  color: $background-color;
+  font-family: "Roboto", serif, "Roboto Regular";
+  font-size: 17px;
+  line-height: 40px;
+  margin: 47px 16px 138px 57px;
+}
+
+#globe, #signIn {
+
+  margin-left: 72px;
+}
+
+#signIn {
+  margin-right: 30px;
+}
+
+#globe, #language, #globe, #signIn {
+  float: right;
+  margin-top: 50px;
+}
+
+.top-nav-section {
+  height: 71px;
+  //align-content: center;
+  box-sizing: border-box;
+}
+
+
+.tab-second-link {
+  font-size: 17px;
+  font-family: "Roboto", serif, "Roboto Regular";
+  color: $text-color;
+}
+
+.tab-second-link:active {
+  font-family: "Roboto", serif, "Roboto Bold";
+}
+
+
+.workPlace {
+  height: 71px;
+
+  box-sizing: border-box;
+  padding: 2px 50px 684px 347px;
+}
+
+.work-place-label {
+  display: inline-block;
+}
+
+.tab-second-item {
+  display: inline-block;
+}
+
+.big-headline-first {
+  font-family: "Poppins", serif, "Poppins Bold";
+  color: $product-color;
+  font-size: 70px;
+  line-height: 80px;
+}
+
+.description {
+  font-family: "Roboto", serif, "Roboto Regular";
+  color: $text-color;
+  font-size: 30px;
+  line-height: 40px;
+}
+
+.add-title {
+  width: 523px;
+  height: 155px;
+  top: 374px;
+  left: 364px;
+  right: 1013px;
+}
+
+.add-section {
+  box-sizing: border-box;
+}
+
