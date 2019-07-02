@@ -6,129 +6,194 @@ $secondary-color: #01FFCB;
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap');
 
-.menu {
-  width: 100vw;
-  height: 201px;
-}
 
-.logo {
-  margin: 50px auto 68px 88px;
-  display: inline-block;
-}
-
-
-.tab-first-item {
+@mixin link-behaviour-visited {
   color: $text-color;
-  font-family: 'Roboto', serif, "Roboto Regular";
-  font-size: 12px;
-  margin-left: 5px;
-  margin-right: 5px;
-  display: inline-block;
+  font-family: "Roboto Bold", sans-serif;
+
 }
 
-.top-nav {
-  display: inline-block;
+@mixin link-behaviour-active {
+  @include link-behaviour-visited();
+  font-weight: bold;
+
+}
+
+
+html, body {
+  margin: 0;
+}
+
+
+header {
+  height: 210px;
+}
+
+//first nav
+
+#logo {
+  margin-top: 44px;
+  margin-left: 68px;
+}
+
+.nav-first {
+  margin-bottom: 40px;
+}
+
+.nav-line-first {
   float: right;
-  margin-top: 50px;
+  margin-top: 0;
 }
 
-.signIn {
-  height: 17px;
-  width: 50px;
-  color: $text-color;
-  font-family: "Roboto", serif, "Roboto Regular";
-  font-size: 17px;
-  line-height: 0;
-  text-align: center;
+.nav-line-first li {
+  display: inline-block;
+  font-family: "Roboto Regular", sans-serif;
 }
 
-.get-btn {
-  height: 80px;
-  width: 280px;
-  background-color: $product-color;
-  border: 0;
-  text-align: center;
-  float: right;
+.nav-line-first li:nth-child(-n+3) {
+  font-size: 13px;
+  margin: 15px;
+
 }
 
-.get-txt {
-  color: $background-color;
-  font-family: "Roboto", serif, "Roboto Regular";
-  font-size: 17px;
-  line-height: 40px;
-  margin: 47px 16px 138px 57px;
-}
-
-#globe, #signIn {
-
+.nav-line-first li:nth-child(4) {
+  width: 18px;
+  height: 40px;
   margin-left: 72px;
 }
 
-#signIn {
+.globe {
+  margin: 0;
+}
+
+.nav-line-first li:nth-child(5) {
+  margin-right: 65px;
+}
+
+.nav-line-first li:nth-child(6) {
   margin-right: 30px;
 }
 
-#globe, #language, #globe, #signIn {
-  float: right;
-  margin-top: 50px;
-}
-
-.top-nav-section {
-  height: 71px;
-  //align-content: center;
+.getTheApp {
   box-sizing: border-box;
+  width: 280px;
+  height: 80px;
+  background-color: $product-color;
+  color: $background-color;
+  font-size: 16px;
+  padding: 47px 138px 16px 57px;
+  font-family: "Roboto Regular", sans-serif;
+}
+
+// second nav
+
+
+.nav-line-second {
+  box-sizing: border-box;
+  height: 22px;
+  margin-top: auto;
+  margin-bottom: 0;
+  padding: 2px 684px 0 347px;
+}
+
+.nav-line-second li {
+  display: inline-block;
+}
+
+.nav-line-second li:first-child {
+  font-size: 19px;
+  font-family: "Roboto Regular", sans-serif;
 }
 
 
-.tab-second-link {
+.nav-line-second li:nth-child(n+2):nth-child(-n+6) {
+  margin: 0 30px;
+}
+
+.nav-second-link:link {
+  font-family: "Roboto Regular", sans-serif;
   font-size: 17px;
-  font-family: "Roboto", serif, "Roboto Regular";
+  line-height: 27px;
   color: $text-color;
+  text-decoration: none;
+  position: relative;
+
 }
 
-.tab-second-link:active {
-  font-family: "Roboto", serif, "Roboto Bold";
+.nav-second-link:hover {
+  @include link-behaviour-active()
+}
+
+.nav-second-link:visited {
+  @include link-behaviour-visited()
 }
 
 
-.workPlace {
-  height: 71px;
+.nav-second-link::after {
+  content: " ";
+  width: 0;
+  height: 3px;
+  background-color: $secondary-color;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  transition: width 0.3s;
 
-  box-sizing: border-box;
-  padding: 2px 50px 684px 347px;
 }
 
-.work-place-label {
-  display: inline-block;
+.nav-second-link:hover::after {
+  width: 33px;
+
 }
 
-.tab-second-item {
-  display: inline-block;
+.first-section {
+  //background-color: $background-color;
+  //background: url("https://assets-us-01.kc-usercontent.com:443/b17309a6-c1a6-4783-8b34-1e273f6881cc/73561929-34fa-4c15-87b6-ceda32a13964/zonifero-features-animation---desks-gray-rev-2.gif?dpr=1&w=1980&fm=webp&lossless=false");
 }
 
-.big-headline-first {
-  font-family: "Poppins", serif, "Poppins Bold";
-  color: $product-color;
+.right {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  position: absolute;
+  width: 40vw;
+  margin-left: 340px;
+}
+
+.download {
+  display: flex;
+  justify-content: flex-start;
+  position: relative;
+}
+
+.download > img:nth-child(1) {
+  margin-right: 2px;
+}
+
+.download > img:nth-child(2) {
+  margin-left: 2px;
+}
+
+.bigHeadline, .description {
+  align-self: center;
+}
+
+.bigHeadline {
   font-size: 70px;
   line-height: 80px;
+  margin: 0;
+  color: $product-color;
+  font-family: "Poppins Bold", sans-serif;
+  font-weight: bold;
 }
 
 .description {
-  font-family: "Roboto", serif, "Roboto Regular";
-  color: $text-color;
   font-size: 30px;
   line-height: 40px;
+  text-align: left;
+  font-family: "Roboto Regular", sans-serif;
 }
 
-.add-title {
-  width: 523px;
-  height: 155px;
-  top: 374px;
-  left: 364px;
-  right: 1013px;
-}
+.left {
 
-.add-section {
-  box-sizing: border-box;
 }
-
