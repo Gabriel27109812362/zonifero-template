@@ -3,7 +3,7 @@ $text-color: #000;
 $background-color: #F7F7F7;
 $secondary-color: #01FFCB;
 
-@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap');
 
 
@@ -202,11 +202,106 @@ header {
 }
 
 .left > #desks {
-  width: 800px;
+  width: 700px;
   position: relative;
 }
 
 .left > #hand {
   position: absolute;
   left: 60px;
+  height: 650px;
+}
+
+//second section
+
+.second-section {
+  margin-top: 150px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.art-title {
+  color: $text-color;
+  font-family: "Poppins Bold", "Arial", sans-serif;
+  line-height: 26px;
+  font-size: 19px;
+}
+
+.art {
+  color: $text-color;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-weight: lighter;
+  line-height: 25px;
+  font-size: 17px;
+  width: 302px;
+}
+
+.text {
+  margin: 60px 2vw;
+}
+
+
+//third section
+
+
+.section {
+  &__first {
+    // all sections <- correct solution
+  }
+
+  &__second {
+    // all sections <- correct solution
+  }
+
+  &__third {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    left: 367px;
+
+    &--header {
+      position: absolute;
+      margin-top: 0;
+      margin-left: 30px;
+      top: 0;
+      left: 0;
+      font-size: 17px;
+      color: $text-color;
+      font-family: "Roboto Regular", "Arial", sans-serif;
+      font-weight: normal;
+    }
+  }
+}
+
+
+.block {
+
+  width: 310px;
+  height: 500px;
+  padding: 50px;
+  box-sizing: border-box;
+
+  &__photo {
+
+  }
+
+  &__title {
+    color: $text-color;
+    font-size: 19px;
+    line-height: 26px;
+    font-family: "Poppins Bold", "Arial", sans-serif;
+    font-weight: bold;
+  }
+
+  &__text {
+    color: $text-color;
+    font-size: 17px;
+    line-height: 25px;
+    font-family: "Roboto", "Arial", sans-serif;
+    font-weight: lighter;
+  }
+
 }
