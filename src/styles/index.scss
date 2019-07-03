@@ -262,7 +262,7 @@ header {
     position: relative;
     left: 367px;
 
-    &--header {
+    &__header {
       position: absolute;
       margin-top: 0;
       margin-left: 30px;
@@ -274,8 +274,11 @@ header {
       font-weight: normal;
     }
   }
-}
 
+  &__fourth {
+    display: block;
+  }
+}
 
 .block {
 
@@ -302,6 +305,59 @@ header {
     line-height: 25px;
     font-family: "Roboto", "Arial", sans-serif;
     font-weight: lighter;
+  }
+
+}
+
+.form-nav {
+  margin-top: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    list-style-type: none;
+
+  }
+
+  &__item {
+    margin: 0 30px;
+  }
+
+  &__link:link {
+    font-family: "Roboto Regular", sans-serif;
+    font-size: 17px;
+    line-height: 27px;
+    color: $text-color;
+    text-decoration: none;
+    position: relative;
+  }
+
+  &__link:hover {
+    @include link_behaviour-active()
+  }
+
+  &__link:visited {
+    @include link-behaviour-visited()
+  }
+
+  &__link::after {
+    content: " ";
+    width: 0;
+    height: 3px;
+    background-color: $secondary-color;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    transition: width 0.3s;
+  }
+
+  &__link:hover::after {
+    width: 33px;
   }
 
 }
