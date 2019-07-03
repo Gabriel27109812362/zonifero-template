@@ -89,6 +89,7 @@ header {
 
 
 .nav-line-second {
+  display: flex;
   box-sizing: border-box;
   height: 22px;
   margin-top: auto;
@@ -147,8 +148,7 @@ header {
 }
 
 .first-section {
-  //background-color: $background-color;
-  //background: url("https://assets-us-01.kc-usercontent.com:443/b17309a6-c1a6-4783-8b34-1e273f6881cc/73561929-34fa-4c15-87b6-ceda32a13964/zonifero-features-animation---desks-gray-rev-2.gif?dpr=1&w=1980&fm=webp&lossless=false");
+
 }
 
 .right {
@@ -195,5 +195,18 @@ header {
 }
 
 .left {
+  width: 800px;
+  position: relative;
+  display: flex;
+  left: 52%;
+}
 
+.left > #desks {
+  width: 800px;
+  position: relative;
+}
+
+.left > #hand {
+  position: absolute;
+  left: 60px;
 }
