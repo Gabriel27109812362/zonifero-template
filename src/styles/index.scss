@@ -359,5 +359,70 @@ header {
   &__link:hover::after {
     width: 33px;
   }
+}
 
+.form-exact {
+
+  &__container {
+
+
+    &--first {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      margin-top: 50px;
+      margin-left: 20vw;
+      margin-right: 20vw;
+    }
+
+    &--second {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 71px;
+    }
+
+  }
+
+  &__element {
+
+  }
+
+  &__label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+
+  &__input {
+    display: block;
+    width: calc(250px + 10vw);
+    height: 38px;
+    font-size: 24px;
+  }
+
+  &__button {
+    width: 200px;
+    height: 60px;
+    text-align: center;
+    color: $background-color;
+    background-color: $product-color;
+    border: none;
+  }
+}
+
+@media (min-width: 1313px) {
+
+  .form-exact__element {
+    margin-right: 1vw;
+    margin-left: 1vw;
+  }
+}
+
+@media (min-width: 1459px) {
+  .form-exact__element:nth-child(5) > .form-exact__input {
+    width: calc(505px + 22vw);
+  }
 }
