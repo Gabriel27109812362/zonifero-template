@@ -214,13 +214,6 @@ header {
 
 //second section
 
-.second-section {
-  margin-top: 150px;
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-  justify-content: center;
-}
 
 .art-title {
   color: $text-color;
@@ -252,27 +245,35 @@ header {
   }
 
   &__second {
-    // all sections <- correct solution
+    margin-top: 150px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+
   }
 
   &__third {
     display: flex;
     align-items: center;
     justify-content: space-around;
+    flex-wrap: nowrap;
     position: relative;
-    left: 367px;
+    margin-left: 15vw;
+  }
 
-    &__header {
-      position: absolute;
-      margin-top: 0;
-      margin-left: 30px;
-      top: 0;
-      left: 0;
-      font-size: 17px;
-      color: $text-color;
-      font-family: "Roboto Regular", "Arial", sans-serif;
-      font-weight: normal;
-    }
+  &__header {
+    position: absolute;
+    margin-top: 0;
+    //margin-left: 30px;
+    top: 0;
+    left: 0;
+    //margin-left: 15vw;
+    font-size: 17px;
+    color: $text-color;
+    font-family: "Roboto Regular", "Arial", sans-serif;
+    font-weight: normal;
   }
 
   &__fourth {
@@ -363,30 +364,28 @@ header {
 
 .form-exact {
 
-  &__container {
-
-
-    &--first {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: center;
-      margin-top: 50px;
-      margin-left: 20vw;
-      margin-right: 20vw;
-    }
-
-    &--second {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-top: 71px;
-    }
-
+  &__first {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    margin-left: 20vw;
+    margin-right: 20vw;
   }
 
+  &__second {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 71px;
+  }
+
+
   &__element {
+    margin-right: 1vw;
+    margin-left: 1vw;
 
   }
 
@@ -394,13 +393,25 @@ header {
     display: block;
     margin-top: 15px;
     margin-bottom: 15px;
+    font-family: "Roboto Light", "Arial", sans-serif;
+    font-size: 13px;
+    color: $text-color;
   }
 
   &__input {
     display: block;
     width: calc(250px + 10vw);
     height: 38px;
-    font-size: 24px;
+    font-size: 30px;
+    font-family: "Roboto Regular", "Arial", sans-serif;
+    border: none;
+    border-bottom: 1px dashed $text-color;
+
+
+  }
+
+  &__decorate {
+    color: $product-color
   }
 
   &__button {
@@ -413,16 +424,14 @@ header {
   }
 }
 
-@media (min-width: 1313px) {
 
-  .form-exact__element {
-    margin-right: 1vw;
-    margin-left: 1vw;
-  }
-}
-
-@media (min-width: 1459px) {
-  .form-exact__element:nth-child(5) > .form-exact__input {
+@media (min-width: 1436px) {
+  .form-exact__element:last-child > .form-exact__input {
     width: calc(505px + 22vw);
   }
 }
+
+// hot desk booking like a pro
+
+
+
