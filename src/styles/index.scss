@@ -264,10 +264,8 @@ header {
   &__header {
     position: absolute;
     margin-top: 0;
-    //margin-left: 30px;
     top: 0;
     left: 0;
-    //margin-left: 15vw;
     font-size: 17px;
     color: $text-color;
     font-family: "Roboto Regular", "Arial", sans-serif;
@@ -393,9 +391,9 @@ header {
     display: block;
     margin-top: 15px;
     margin-bottom: 15px;
-    font-family: "Roboto Light", "Arial", sans-serif;
-    font-size: 13px;
-    color: $text-color;
+    font-family: "Roboto Regular", "Arial", sans-serif;
+    font-size: 25px;
+    transform: translateY(-50px);
   }
 
   &__input {
@@ -406,7 +404,12 @@ header {
     font-family: "Roboto Regular", "Arial", sans-serif;
     border: none;
     border-bottom: 1px dashed $text-color;
+  }
 
+  &__input:focus + &__label {
+    font-size: 13px;
+    transform: translateY(-75px);
+    transition: transform 0.1s cubic-bezier(.89, .51, 1, .52), font-size 0.1s cubic-bezier(.89, .51, 1, .52);
 
   }
 
@@ -421,6 +424,7 @@ header {
     color: $background-color;
     background-color: $product-color;
     border: none;
+
   }
 }
 
@@ -430,7 +434,6 @@ header {
     width: calc(505px + 22vw);
   }
 }
-
 
 
 // hot desk booking like a pro
