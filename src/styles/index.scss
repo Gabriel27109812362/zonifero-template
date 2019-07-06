@@ -238,6 +238,9 @@ header {
 
 
 .section {
+
+
+
   &__first {
     // all sections <- correct solution
   }
@@ -581,7 +584,7 @@ header {
     top: -35px;
     right: 0;
 
-    &---reverse {
+    &--reverse {
       transform: rotate(180deg);
       left: 0;
       right: auto;
