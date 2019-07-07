@@ -1,0 +1,31 @@
+@import "variables";
+
+@mixin smartphone-p {
+  @media (min-width: $phone-min-width) and (max-width: $phone-max-width) {
+    @content
+  }
+}
+
+@mixin low-tablet-p-phone-l {
+  @media (min-width: $low-tablet-min-width) and(max-width: $low-tablet-max-width) {
+    @content
+  }
+}
+
+@mixin high-tablet-l {
+  @media(min-width: $high-tablet-min-width) and (max-width: $high-tablet-max-width) {
+    @content
+  }
+}
+
+@mixin small-desktop {
+  @media(min-width: $small-desktop-min-width) and (max-width: $small-desktop-max-width) {
+    @content
+  }
+}
+
+@mixin high-desktop {
+  @media (min-width: $high-desktop-min-width) {
+    @content
+  }
+}

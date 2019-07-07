@@ -1,11 +1,14 @@
 @import "variables";
+@import "screen_mixins";
+@import "mixins";
+
 
 .nav-container {
   position: fixed;
   width: 100%;
 }
 
-.navbar-up {
+.navbar-main {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -13,10 +16,14 @@
 
 
   &__menu {
-    width: 169px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
+
+    @include low-tablet-p-phone-l() {
+      transform: translateX(-46.5px);
+    }
 
   }
 
@@ -27,6 +34,22 @@
     margin-top: 21px;
     margin-left: 20px;
     margin-bottom: 21px;
+
+    @include low-tablet-p-phone-l() {
+      @include ful-logo-size()
+    }
+
+    @include high-tablet-l() {
+      @include ful-logo-size()
+    }
+
+    @include small-desktop() {
+      @include ful-logo-size()
+    }
+
+    @include high-desktop() {
+      @include ful-logo-size()
+    }
   }
 
   &__title {
@@ -35,6 +58,38 @@
     margin: 0;
     font-family: $roboto, sans-serif;
     font-weight: normal;
+
+
+  }
+
+  &__select {
+    width: 17px;
+    height: 17px;
+    background-color: $background-color;
+    background-image: url("../../assets/select.png");
+    background-size: cover;
+
+    @include high-tablet-l() {
+      display: none;
+    }
+  }
+
+  &__nav {
+    display: none;
+    list-style-type: none;
+
+
+    @include high-tablet-l() {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      width: 45vw;
+
+    }
+  }
+
+  &__item {
+
   }
 
   &__hamburger {
@@ -47,12 +102,5 @@
     margin-right: 18px;
   }
 
-  &__select {
-    width: 17px;
-    height: 17px;
-    background-color: $background-color;
-    background-image: url("../../assets/select.png");
-    background-size: cover;
-  }
 
 }

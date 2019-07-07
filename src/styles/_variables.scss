@@ -9,23 +9,23 @@ $secondary-color: #01FFCB;
 
 
 //most smartphones (portrait)
-$phone-min-with: 320px;
-$phone-max-with: 480px;
+$phone-min-width: 320px;
+$phone-max-width: 480px;
 
 // low tablets (portrait), Mobiles (landscape)
-$low-tablet-min-with: 481px;
-$low-tablet-max-with: 767px;
+$low-tablet-min-width: 481px;
+$low-tablet-max-width: 767px;
 
 //high tables
-$high-tablet-min-with: 768px;
-$high-tablet-max-with: 1024px;
+$high-tablet-min-width: 768px;
+$high-tablet-max-width: 1024px;
 
 //small desktop
-$small-destop-min-with: 1025px;
-$small-destop-max-with: 1280px;
+$small-desktop-min-width: 1025px;
+$small-desktop-max-width: 1280px;
 
 //high desktop
-$high-desktop-min-with: 1281px;
+$high-desktop-min-width: 1281px;
 
 
 //Fonts
