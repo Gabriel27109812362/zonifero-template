@@ -1,0 +1,33 @@
+//COLORS
+$product-color: #3146FF;
+$text-color: #000;
+$background-color: #F7F7F7;
+$secondary-color: #01FFCB;
+
+
+//SIZES
+
+
+//most smartphones (portrait)
+$phone-min-with: 320px;
+$phone-max-with: 480px;
+
+// low tablets (portrait), Mobiles (landscape)
+$low-tablet-min-with: 481px;
+$low-tablet-max-with: 767px;
+
+//high tables
+$high-tablet-min-with: 768px;
+$high-tablet-max-with: 1024px;
+
+//small desktop
+$small-destop-min-with: 1025px;
+$small-destop-max-with: 1280px;
+
+//high desktop
+$high-desktop-min-with: 1281px;
+
+
+//Fonts
+$roboto: "Roboto";
+$poppins: "Poppins";

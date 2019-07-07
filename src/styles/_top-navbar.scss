@@ -1,0 +1,58 @@
+@import "variables";
+
+.nav-container {
+  position: fixed;
+  width: 100%;
+}
+
+.navbar-up {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $background-color;
+
+
+  &__menu {
+    width: 169px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+  }
+
+  &__logo {
+    background-image: url("../../assets/logo_mobile.png");
+    width: 34px;
+    height: 25px;
+    margin-top: 21px;
+    margin-left: 20px;
+    margin-bottom: 21px;
+  }
+
+  &__title {
+    font-size: 17px;
+    line-height: 21px;
+    margin: 0;
+    font-family: $roboto, sans-serif;
+    font-weight: normal;
+  }
+
+  &__hamburger {
+    background-image: url("../../assets/hamburger_menu.png");
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+    border: none;
+    background-color: transparent;
+    margin-right: 18px;
+  }
+
+  &__select {
+    width: 17px;
+    height: 17px;
+    background-color: $background-color;
+    background-image: url("../../assets/select.png");
+    background-size: cover;
+  }
+
+}
