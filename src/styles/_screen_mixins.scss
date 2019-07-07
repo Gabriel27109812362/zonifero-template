@@ -1,5 +1,8 @@
 @import "variables";
 
+
+//Single case screen mixins
+
 @mixin smartphone-p {
   @media (min-width: $phone-min-width) and (max-width: $phone-max-width) {
     @content

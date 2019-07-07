@@ -1,5 +1,50 @@
+@import "variables";
+@import "screen_mixins";
+
 @mixin ful-logo-size {
   background-image: url("../../assets/logo.png");
   width: 127px;
   height: 25px;
+}
+
+// mixins to use for animate link
+@mixin link-normal {
+  font-family: $roboto;
+  font-size: 17px;
+  line-height: 27px;
+  color: $text-color;
+  text-decoration: none;
+  position: relative;
+}
+
+@mixin underline-hidden {
+  content: " ";
+  width: 0;
+  height: 3px;
+  background-color: $secondary-color;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  transition: width 0.3s;
+}
+
+@mixin underline-show {
+  width: 33px;
+}
+
+@mixin change-font-w {
+  font-weight: bold;
+}
+
+//Combine 3 screen mixins from high tablet to high desktop
+@mixin high-tablet-up {
+  @include high-tablet-l() {
+    @content
+  }
+  @include small-desktop() {
+    @content
+  }
+  @include high-desktop {
+    @content
+  }
 }

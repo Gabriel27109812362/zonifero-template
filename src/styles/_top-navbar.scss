@@ -15,6 +15,14 @@
   background-color: $background-color;
 
 
+  &__top-menu {
+    display: none;
+
+    
+
+  }
+
+
   &__menu {
     display: flex;
     align-items: center;
@@ -39,15 +47,7 @@
       @include ful-logo-size()
     }
 
-    @include high-tablet-l() {
-      @include ful-logo-size()
-    }
-
-    @include small-desktop() {
-      @include ful-logo-size()
-    }
-
-    @include high-desktop() {
+    @include high-tablet-up(){
       @include ful-logo-size()
     }
   }
@@ -69,7 +69,7 @@
     background-image: url("../../assets/select.png");
     background-size: cover;
 
-    @include high-tablet-l() {
+    @include high-tablet-up() {
       display: none;
     }
   }
@@ -77,8 +77,6 @@
   &__nav {
     display: none;
     list-style-type: none;
-    font-family: $roboto, sans-serif;
-
 
     @include high-tablet-l() {
       display: flex;
@@ -86,11 +84,32 @@
       justify-content: space-around;
       width: 45vw;
     }
+
+    @include small-desktop() {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      width: 45vw;
+    }
   }
 
-  &__item {
 
+  &__link {
+    @include link-normal();
   }
+
+  &__link::after {
+    @include underline-hidden()
+  }
+
+  &__link:hover {
+    @include change-font-w()
+  }
+
+  &__link:hover::after {
+    @include underline-show()
+  }
+
 
   &__hamburger {
     background-image: url("../../assets/hamburger_menu.png");
@@ -100,6 +119,10 @@
     border: none;
     background-color: transparent;
     margin-right: 18px;
+
+    @include high-tablet-up() {
+      display: none;
+    }
   }
 
 
