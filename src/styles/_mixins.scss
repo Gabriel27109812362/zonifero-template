@@ -44,7 +44,16 @@
   @include small-desktop() {
     @content
   }
-  @include high-desktop {
+  @include high-desktop() {
+    @content
+  }
+}
+
+@mixin small-desktop-up {
+  @include small-desktop() {
+    @content
+  }
+  @include high-desktop() {
     @content
   }
 }

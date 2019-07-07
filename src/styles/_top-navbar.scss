@@ -13,12 +13,18 @@
   align-items: center;
   justify-content: space-between;
   background-color: $background-color;
-
+  flex-wrap: wrap;
 
   &__top-menu {
     display: none;
 
-    
+    @include small-desktop() {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+
+    }
 
   }
 
@@ -47,7 +53,7 @@
       @include ful-logo-size()
     }
 
-    @include high-tablet-up(){
+    @include high-tablet-up() {
       @include ful-logo-size()
     }
   }
@@ -69,9 +75,12 @@
     background-image: url("../../assets/select.png");
     background-size: cover;
 
-    @include high-tablet-up() {
-      display: none;
+    &--first {
+      @include high-tablet-up() {
+        display: none;
+      }
     }
+
   }
 
   &__nav {
@@ -120,7 +129,7 @@
     background-color: transparent;
     margin-right: 18px;
 
-    @include high-tablet-up() {
+    @include small-desktop-up() {
       display: none;
     }
   }
