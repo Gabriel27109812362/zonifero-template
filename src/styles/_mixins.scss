@@ -57,3 +57,16 @@
     @content
   }
 }
+
+
+@mixin flex-s-b-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin flex-s-a-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
