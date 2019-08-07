@@ -36,29 +36,6 @@
   font-weight: bold;
 }
 
-//Combine 3 screen mixins from high tablet to high desktop
-@mixin high-tablet-up {
-  @include high-tablet-l() {
-    @content
-  }
-  @include small-desktop() {
-    @content
-  }
-  @include high-desktop() {
-    @content
-  }
-}
-
-@mixin small-desktop-up {
-  @include small-desktop() {
-    @content
-  }
-  @include high-desktop() {
-    @content
-  }
-}
-
-
 @mixin flex-s-b-container {
   display: flex;
   align-items: center;
@@ -69,4 +46,10 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
+}
+
+@mixin flex-c-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

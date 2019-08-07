@@ -1,0 +1,90 @@
+@import "variables";
+@import "screen_mixins";
+@import "mixins";
+
+
+.hero-section {
+
+  @include flex-c-container();
+  flex-direction: column;
+  width: 100%;
+  height: 567px;
+  background-color: $background-color;
+
+
+  @include smartphone-p() {
+
+  }
+  @include low-tablet-p-phone-l() {
+
+  }
+  @include small-desktop() {
+    width: 100%;
+    height: 639px;
+  }
+  @include high-desktop() {
+    width: 100%;
+    height: 639px;
+  }
+
+
+  &__title {
+
+    font-size: 35px;
+    font-family: $poppins, sans-serif;
+    line-height: 45px;
+    color: $product-color;
+    margin-left: 19px;
+    margin-right: 32px;
+
+
+    @include smartphone-p() {
+
+    }
+
+    @include low-tablet-p-phone-l() {
+      font-size: 40px;
+      line-height: 50px;
+    }
+
+    @include high-tablet-l() {
+      font-size: 50px;
+      line-height: 60px;
+    }
+
+    @include small-desktop() {
+      font-size: 60px;
+      line-height: 70px;
+    }
+
+    @include high-desktop() {
+      font-size: 70px;
+      line-height: 80px;
+    }
+  }
+
+  &__images-container {
+    width: 100%;
+    height: 250px;
+    background-color: black;
+    position: relative;
+  }
+
+  &__text {
+
+  }
+
+  &__black-button {
+
+  }
+
+  &__desks {
+
+  }
+
+  &__mobile {
+
+  }
+
+
+}
