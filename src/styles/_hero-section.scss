@@ -8,7 +8,7 @@
   @include flex-c-container();
   flex-direction: column;
   width: 100%;
-  height: 567px;
+  overflow: hidden;
   background-color: $background-color;
 
 
@@ -36,7 +36,6 @@
     color: $product-color;
     margin-left: 19px;
     margin-right: 32px;
-    //margin-bottom: 10px;
     margin-top: 150px;
 
     @include smartphone-p() {
@@ -65,50 +64,101 @@
   }
 
   &__images-container {
+    box-sizing: border-box;
     position: relative;
     width: 100%;
-    height: calc(50% + 20vw);
-
-    @include low-tablet-p-phone-l() {
-
+    overflow: hidden;
+    min-height: 350px;
+    padding: 20px;
+    @media(min-width: 496px) and (max-width: $low-tablet-max-width) {
+      min-height: 435px;
+    }
+    @include high-tablet-l() {
+      min-height: 530px;
+    }
+    @media (min-width: 870px) and (max-height: $high-tablet-max-width) {
+      min-height: 560px;
     }
   }
 
 
   &__desks {
     position: absolute;
-    background-image: url("../../assets/first_section_bg_cut.png");
     width: 100%;
-    height: calc(150px + 22vw);
-    background-repeat: no-repeat;
-    background-size: 120%;
-    background-position: top calc(100px - 20vw) right -45px;
-    @include low-tablet-p-phone-l() {
+    min-width: 400px;
+    object-fit: contain;
 
-    }
 
   }
 
   &__mobile {
-    background-image: url("../../assets/hand.png");
     position: absolute;
-    width: calc(150px + 15vw);
-    height: calc(70% + 15vw);
-    background-repeat: no-repeat;
-    background-size: calc(110% + 10vw);
+    object-fit: contain;
+    max-height: 300px;
+    z-index: 1;
+    margin-left: auto;
+    margin-right: auto;
     left: 0;
     right: 0;
-    margin: auto;
-    top: -30px;
-    background-position: top 0 left -7px ;
+
+    @media(min-width: 496px) and (max-width: 630px) {
+      max-height: 380px;
+    }
+    @media (min-width: 631px) and (max-width: $low-tablet-max-width) {
+      max-height: 460px;
+    }
+    @include high-tablet-l() {
+      max-height: 560px;
+    }
+    @media(min-width: 870px) and (max-width: $high-tablet-max-width) {
+      max-height: 630px;
+    }
   }
 
   &__text {
+    width: 85%;
+    font-size: 25px;
+    font-family: $roboto, sans-serif;
+    color: $text-color;
+    line-height: 30px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+
+    @media(min-width: 630px) {
+      margin-top: 25px;
+    }
+
+    @include high-tablet-l() {
+      font-size: 30px;
+      line-height: 40px;
+    }
+
+
+  }
+
+  &__link {
+    text-decoration: none;
+  }
+
+  &__buttons-box {
+    @include flex-s-b-container();
+    width: 500px;
+    box-sizing: border-box;
+    flex-direction: row;
+
 
   }
 
 
   &__black-button {
+    min-height: 40px;
+    height: 10vw;
+    max-height: 72px;
+    margin-left: 5px;
+    margin-right: 5px;
 
   }
 
